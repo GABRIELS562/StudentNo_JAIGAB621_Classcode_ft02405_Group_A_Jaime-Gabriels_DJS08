@@ -38,3 +38,25 @@ For your recorded presentation, you will be discussing key concepts related to R
 Be prepared to provide code snippets and real-world application examples from your Van Life Project to support your explanations.
 
 Make sure to submit your project to the DJS08 Project Tab on the LMS. Include a link to your Loom Presentation in your README.
+
+Question 1  What is the purpose of using React Router in a React application?
+
+React Router is a library used to manage navigation in single-page React applications (SPA). Instead of reloading the entire page when a user navigates between views, React Router enables the app to dynamically update the view by only changing certain parts of the UI, which keeps the user experience smooth and fast. 
+Import React Router Components
+Wrap Your App with BrowserRouter
+Define Routes Using Routes and Route
+Use Link or NavLink for Navigation:
+
+The <Routes> component is a container that holds all the individual routes (<Route> components). It manages the rendering of different components based on the current URL. The key role of <Routes> is to ensure that only one matching route is rendered at any given time.
+
+	•	Routing Context: It acts as the routing context, allowing the app to “listen” to changes in the browser’s address bar and determine which route should be rendered.
+	•	Exclusive Route Matching: Only the first matching route inside the <Routes> container is rendered. This ensures that when a path matches, only the associated component is shown, preventing multiple components from being displayed accidentally.
+
+The <Route> component defines an individual route, mapping a URL path to a React component. It consists of two main props:
+
+	•	path: This defines the URL segment that will trigger the route to render.
+	•	element: This specifies the React component that will be rendered when the path matches the current URL.
+
+Each <Route> is a mapping of a specific URL path to the corresponding component.
+
+Question 2
