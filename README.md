@@ -60,3 +60,9 @@ The <Route> component defines an individual route, mapping a URL path to a React
 Each <Route> is a mapping of a specific URL path to the corresponding component.
 
 Question 2
+
+Nested routes
+- nesting pieces of url
+- shared UI
+- -shared user interfaces
+- want to keep same UI and display more
