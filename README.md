@@ -59,10 +59,47 @@ The <Route> component defines an individual route, mapping a URL path to a React
 
 Each <Route> is a mapping of a specific URL path to the corresponding component.
 
+
+
+
+
+
+
 Question 2
+Route parameters are used to define parts of the URL that are dynamic. For example, if you’re building a blog, you might have a URL structure where the post ID is part of the URL:
+Defining Routes with Parameters:
+You define a route parameter in a Route component using a colon (:) followed by the parameter name. For example:
+To access the values of the route parameters in the component that is rendered by the route, you use the useParams hook provided by React Router.
+In the component rendered by the route, you use the useParams() hook from react-router-dom to access the values of the parameters.
+
+
 
 Nested routes
 - nesting pieces of url
 - shared UI
 - -shared user interfaces
 - want to keep same UI and display more
+- -header footer outlet layout
+
+
+How does the <Link> component enhance navigation within a React application?
+The <Link> component facilitates client-side navigation by preventing the browser from performing a full-page reload when navigating to a different route. This enhances performance and provides a smoother, faster user experience because the application does not have to reload the entire HTML page or re-fetch all resources from the server. Only the parts of the page that need to be updated (such as content or components) are changed.
+
+Preserving Application State:
+
+Since the <Link> component doesn’t trigger a full-page reload, application state (data held in React components or global state management like Redux) is preserved across different pages. This prevents unnecessary loss of user input or data that might happen with traditional anchor (<a>) tags, which cause the browser to reset the app state.
+
+
+Describe the use of NavLink for active styling. What makes NavLink different from the basic Link component?
+Key Differences Between <NavLink> and <Link>:
+
+	1.	Active Styling:
+	•	NavLink allows you to apply specific CSS classes or styles to a link when it is “active”—i.e., when the route it links to matches the current URL.
+	•	Link, on the other hand, is a simpler component that only provides navigation without offering active styling functionality.
+	2.	Automatic Active Class:
+	•	By default, <NavLink> automatically applies a CSS class called active to the link when the current URL matches the to prop.
+	3.	Customization of Active Styles:
+	•	You can customize the active styles by providing your own class or inline style through the className or style props using a function that checks whether the link is active.
+
+
+n React Router, search parameters (also known as query parameters) are key-value pairs appended to the end of a URL that provide additional context or information for the request. The useSearchParams hook allows you to read and manipulate these search parameters to dynamically filter content in your application. This functionality is especially useful in scenarios like filtering lists or managing user search queries, as demonstrated in projects like the VanLife challenge where users filter van rentals by criteria such as price, type, or availability./vans?type=camper&price=low
